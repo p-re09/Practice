@@ -5,13 +5,14 @@ public class DummyJava{
     public boolean practiceBool;
     public double practiceDouble;
 
-    public static int doCalc(){
+    public static double doCalc(){
         x +=5;
-        return x;
+        double y = 5.0;
+        return y;
     }
 
     public static void main(String [] args){
-        int j = doCalc();
+        double j = doCalc();
         System.out.println(j);
     }
 }
