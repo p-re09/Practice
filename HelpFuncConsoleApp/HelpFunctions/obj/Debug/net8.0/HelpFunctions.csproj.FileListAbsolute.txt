@@ -1,0 +1,14 @@
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\bin\Debug\net8.0\HelpFunctions.exe
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\bin\Debug\net8.0\HelpFunctions.deps.json
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\bin\Debug\net8.0\HelpFunctions.runtimeconfig.json
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\bin\Debug\net8.0\HelpFunctions.dll
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\bin\Debug\net8.0\HelpFunctions.pdb
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.AssemblyInfoInputs.cache
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.AssemblyInfo.cs
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.csproj.CoreCompileInputs.cache
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.dll
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\refint\HelpFunctions.dll
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.pdb
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.genruntimeconfig.cache
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\ref\HelpFunctions.dll
