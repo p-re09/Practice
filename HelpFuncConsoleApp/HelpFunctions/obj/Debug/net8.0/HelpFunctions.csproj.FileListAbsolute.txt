@@ -12,3 +12,4 @@ C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\refint
 C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.pdb
 C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.genruntimeconfig.cache
 C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\ref\HelpFunctions.dll
+C:\Users\preci\Practice\HelpFuncConsoleApp\HelpFunctions\obj\Debug\net8.0\HelpFunctions.sourcelink.json
