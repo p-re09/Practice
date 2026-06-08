@@ -52,25 +52,56 @@ namespace HelpFuncConsoleApp
                     break;
             }**/
 
-            for (int i = 0; i < 5; i++)
-            {
-                //Console.WriteLine(i);
-            }
+            //for (int i = 0; i < 5; i++)
+            //{
+            //   Console.WriteLine(i);
+            //}
 
             int q = 0;
             int j = 10;
 
-            while (q < j)
-            {
+            //while (q < j)
+            //{
                 //Console.WriteLine(q);
-                q++;
-            }
+            //    q++;
+            //}
 
-            string [] strArrray = ["blackcurrent", "opiods", "thyloid", "java", "rickets"];
-            foreach (string str in strArrray)
-            {
-                Console.WriteLine(str);
-            }
+            string [] strArray = new string[3];
+            strArray = ["couch", "bed", "chair"];
+
+            //foreach (string str in strArrray)
+            //{
+                //Console.WriteLine(str);
+            //}
+
+            List <String> colour = strArray.ToList();
+            //List <String> colour = new List<string>();
+
+            colour.Add("red");
+            colour.Add("blue");
+            colour.Add("green");
+            colour.Add("magenta");
+            colour.Add("indigo");
+            colour.Add("purple");
+            colour.Add("cyan");
+            colour.Add("beige");
+            colour.Add("blue");
+
+            colour.Remove("red");
+            colour.Sort();
+            colour.Reverse();
+            //Console.WriteLine(colour.IndexOf("blue"));
+            //Console.WriteLine(colour.LastIndexOf("blue"));
+
+            //foreach (string c in colour)
+            //{
+            //    Console.WriteLine(c);
+            //}
+
+            String house = "chair is comfy with an execptional mattress";
+            String i = "On a very comfy ";
+            i = house + "fgewf";
+            Console.WriteLine(i);
         }
     }
 }

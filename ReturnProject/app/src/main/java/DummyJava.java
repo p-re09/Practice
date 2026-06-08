@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class DummyJava{
 
     public static String practiceString;
@@ -22,7 +24,7 @@ public class DummyJava{
             //System.out.println("NOT " + practiceBool);
         }
 
-        switch (practiceString) {
+        /**switch (practiceString) {
             case "---":
                 //System.out.println(practiceString);
                 practiceBool = true;
@@ -43,25 +45,46 @@ public class DummyJava{
                 //System.out.println(x);
                 practiceBool = true;
                 break;
-        }
+        }**/
 
-        for (int i = 0; i < 11; i++){
-            //System.out.println("yes " + (i+1));
-        }
+        //for (int i = 0; i < 11; i++){
+        //    //System.out.println("yes " + (i+1));
+        //}
 
-        for (int i = 0; i <= 2 ; i++){
-            for (int j = 0; j < 3; j++){
+        //for (int i = 0; i <= 2 ; i++){
+        //    for (int j = 0; j < 3; j++){
                 //System.out.println(i + " " + j);
-            }
-        }
+        //    }
+        //}
 
         int i = 10;
         int j = 0;
 
-        while (j < i) {
-            System.out.println(j);
-            j++;
-        }
+        //while (j < i) {
+        //    System.out.println(j);
+        //    j++;
+        //}
+
+        String [] fruits = {"wdfwde", "were", "ewrwee"};
+
+        //for (i = 0; i < fruits.length; i++){
+        //    System.out.println(fruits[i]);
+        //}
+        
+        ArrayList <String> testArrayList = new ArrayList<String>();
+        testArrayList.add("coin");
+        testArrayList.add("bag");
+        testArrayList.add("purse");
+        testArrayList.add("luggage");
+        testArrayList.add("bath");
+
+
+        //for (i = 0; i < testArrayList.size(); i++){
+        //    System.out.println(testArrayList.get(i));
+        //}
+        String strNewTest = "gghjnbvcvb";
+        System.out.println(strNewTest.indexOf('g'));
+        System.out.println(strNewTest.lastIndexOf('g'));
 
         return practiceBool;
     }
