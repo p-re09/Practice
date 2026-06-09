@@ -4,8 +4,8 @@
 package returnproject;
 
 public class App {
-    public int count() {
-        return 4;
+    public static int count() {
+        return 5;
     }
 
     public static void main(String[] args) {

@@ -9,6 +9,11 @@ namespace HelpFuncConsoleApp
 {
     internal class Program
     {
+
+        public String getCode()
+        {
+            return "dfgf";
+        }
         static void Main(string[] args)
         {
             var x = "string";
@@ -74,22 +79,22 @@ namespace HelpFuncConsoleApp
                 //Console.WriteLine(str);
             //}
 
-            List <String> colour = strArray.ToList();
+            //List <String> colour = strArray.ToList();
             //List <String> colour = new List<string>();
 
-            colour.Add("red");
-            colour.Add("blue");
-            colour.Add("green");
-            colour.Add("magenta");
-            colour.Add("indigo");
-            colour.Add("purple");
-            colour.Add("cyan");
-            colour.Add("beige");
-            colour.Add("blue");
+            //colour.Add("red");
+            //colour.Add("blue");
+            //colour.Add("green");
+            //colour.Add("magenta");
+            //colour.Add("indigo");
+            //colour.Add("purple");
+            //colour.Add("cyan");
+            //colour.Add("beige");
+            //colour.Add("blue");
 
-            colour.Remove("red");
-            colour.Sort();
-            colour.Reverse();
+            //colour.Remove("red");
+            //colour.Sort();
+            //colour.Reverse();
             //Console.WriteLine(colour.IndexOf("blue"));
             //Console.WriteLine(colour.LastIndexOf("blue"));
 

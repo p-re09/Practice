@@ -34,10 +34,14 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "returnproject.App"
+    mainClass = "returnproject.DummyJava"
 }
 
 tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
 }
