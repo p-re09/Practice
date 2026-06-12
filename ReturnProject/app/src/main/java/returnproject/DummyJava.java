@@ -4,15 +4,58 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.jar.Attributes.Name;
 
-public class DummyJava{
+interface InnerDummyJava {
+    public String getSound(String machine);
+}
+
+interface InnerDummyJava_2 {
+    public int getWeight();
+}
+
+public class DummyJava implements InnerDummyJava, InnerDummyJava_2{
 
     int myX;
     int myY;
+    private String foodName;
+    protected static int money = 5;
     
-    public DummyJava(int x, int y){    
-        myX = x + 1;
-        myY = y + 2;
+    //public DummyJava(int x, int y){    
+    //    myX = x + 1;
+    //    myY = y + 2;
+    //}
+
+    public String getName(){
+        return foodName;
     }
+
+    public String setFoodName(String name){
+        this.foodName = name;
+        return name;
+    }
+
+    //public String getSound(){
+    //    return "hehehehe";
+    //}
+
+    public String getSound(String machine){
+        if (machine.toLowerCase().contains("car")){
+            return "vroom";
+        }
+        else if (machine.toLowerCase().contains("train")) {
+            return "chugachugachoochoo!!!";
+        }
+        else {
+            machine = "";
+        }
+        
+        return " ";
+    }
+
+    public int getWeight(){
+        return 9;
+    }
+
+    
 
     //public static String practiceString;
     //public static int x = 2 , y = 4, z = 5;
@@ -21,8 +64,9 @@ public class DummyJava{
     //public int testInt = App.count();
 
     public static int doCalc(){
-        App myObj = new App();
-        int testInt = myObj.count();
+        //App myObj = new App();
+        //int testInt = myObj.count();
+        int testInt = 9;
     //    x +=5;
     //    practiceString = "teststring";
 
@@ -105,8 +149,8 @@ public class DummyJava{
 
     public static void main(String [] args){
 
-        DummyJava myTest = new DummyJava(1, 2);
-        System.out.println(myTest.myX + " " + myTest.myY);
+        //DummyJava myTest = new DummyJava(1, 2);
+        //System.out.println(myTest.myX + " " + myTest.myY);
         //Scanner myScanner = new Scanner(System.in);
         //System.out.println("Enter name: ");
 
@@ -114,5 +158,18 @@ public class DummyJava{
         //System.out.println(name + "-----------------------");
         //int intJ = doCalc();
         //System.out.println(intJ);
+        DummyJava myTest = new DummyJava();
+        System.out.println(myTest.getSound("car"));
+        System.out.println(myTest.getWeight());
+    }
+}
+
+class DummyJava_2 extends DummyJava{
+    public static int myInt = 10;
+    public static void main(String[] args) {
+        DummyJava_2 pounds = new DummyJava_2();
+        pounds.setFoodName("tim");
+        System.out.println(pounds.getName());
+        System.out.println(money * myInt);
     }
 }

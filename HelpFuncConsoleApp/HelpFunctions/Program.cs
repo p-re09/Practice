@@ -7,20 +7,42 @@ using System.Threading.Tasks;
 
 namespace HelpFuncConsoleApp
 {
-    internal class Program
+
+    interface ISound
+    {
+        public string getAnimal();
+    }
+    interface ISound2
+    {
+        public string getAnimalNoise();
+    }
+    internal class Program : ISound, ISound2
     {
 
         public String getCode()
         {
             return "dfgf";
         }
+
+        public string getAnimal()
+        {
+            return "flamingo";
+        }
+
+        public string getAnimalNoise()
+        {
+            return "heheeeeee";
+        }
         static void Main(string[] args)
         {
-            var x = "string";
-            int y = 1;
-            bool boolTest = true;
 
-            if (boolTest == true)
+            Program test = new Program();
+            Console.WriteLine(test.getAnimal() + " " + test.getAnimalNoise());
+            //var x = "string";
+            //int y = 1;
+            //bool boolTest = true;
+
+            /**if (boolTest == true)
             {
                 //Console.WriteLine(x + " " + boolTest);
             }
@@ -31,7 +53,7 @@ namespace HelpFuncConsoleApp
             else
             {
                 //Console.WriteLine(y + " " + boolTest);
-            }
+            }**/
 
             /**Console.WriteLine("Input a number between 1 and 4 and press Enter");
             string input = Console.ReadLine();
@@ -62,8 +84,8 @@ namespace HelpFuncConsoleApp
             //   Console.WriteLine(i);
             //}
 
-            int q = 0;
-            int j = 10;
+            //int q = 0;
+            //int j = 10;
 
             //while (q < j)
             //{
@@ -71,8 +93,8 @@ namespace HelpFuncConsoleApp
             //    q++;
             //}
 
-            string [] strArray = new string[3];
-            strArray = ["couch", "bed", "chair"];
+            //string [] strArray = new string[3];
+            //strArray = ["couch", "bed", "chair"];
 
             //foreach (string str in strArrray)
             //{
@@ -103,10 +125,10 @@ namespace HelpFuncConsoleApp
             //    Console.WriteLine(c);
             //}
 
-            String house = "chair is comfy with an execptional mattress";
-            String i = "On a very comfy ";
-            i = house + "fgewf";
-            Console.WriteLine(i);
+            //String house = "chair is comfy with an execptional mattress";
+            //String i = "On a very comfy ";
+            //i = house + "fgewf";
+            //Console.WriteLine(i);
         }
     }
 }

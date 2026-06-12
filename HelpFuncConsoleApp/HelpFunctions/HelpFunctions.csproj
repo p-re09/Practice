@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateProgramFile>false</GenerateProgramFile>
-    <StartupObject>HelpFuncConsoleApp.Program2</StartupObject>
+    <StartupObject>HelpFuncConsoleApp.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

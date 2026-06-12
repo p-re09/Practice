@@ -9,6 +9,8 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().count());
+        DummyJava testDJ = new DummyJava();
+        testDJ.setFoodName("Fifal");
+        System.out.println(testDJ.getName());
     }
 }
