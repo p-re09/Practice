@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
 
 namespace HelpFuncConsoleApp
 {
@@ -16,12 +17,71 @@ namespace HelpFuncConsoleApp
     {
         public string getAnimalNoise();
     }
+
+    class MyException : Exception
+    {
+        public MyException(string message) : base(message)
+        {
+            
+        }
+    }
+
+    class MyException2 : Exception
+    {
+        public int CurrentBalance {get;}
+        public MyException2(string message, int balance) : base(message)
+        {
+            CurrentBalance = balance;
+        }
+    }
+
     internal class Program : ISound, ISound2
     {
 
-        public String getCode()
+        public string getCode()
         {
             return "dfgf";
+        }
+
+        public int transaction(int withdrawalAmount)
+        {
+            int balance = 500;
+            if (withdrawalAmount > balance)
+            {
+                throw new MyException2("Insufficient funds", balance);
+            }
+            balance -= withdrawalAmount;
+
+            return balance;
+        }
+
+        public char myString(int [] j, int o)
+        {
+            if (o > j.Length)
+            {
+                throw new MyException("Out of Bounds");
+            }
+            Console.WriteLine("It worked");
+            return ' '; 
+        }
+
+        public string heHeeee(int i, string j)
+        {
+            //string [] myArray = new string[3];
+            //myArray = ["eregrre","rftgrf","rfgtrfeerf","erger", "regtrter"];
+            //string myString = myArray[10];
+
+            if (i > j.Length)
+            {
+                //throw new ArithmeticException("Not in bounds");
+                //throw new IndexOutOfRangeException("Not in bounds");
+                throw new NullReferenceException("Not in bounds");
+            }
+            else
+            {
+                Console.WriteLine("hehee");
+            }
+            return " ";
         }
 
         public string getAnimal()
@@ -33,11 +93,64 @@ namespace HelpFuncConsoleApp
         {
             return "heheeeeee";
         }
+
+        
         static void Main(string[] args)
         {
 
             Program test = new Program();
-            Console.WriteLine(test.getAnimal() + " " + test.getAnimalNoise());
+
+            try
+            {
+                test.transaction(700);
+            }
+            catch (MyException2 ex)
+            {
+                Console.WriteLine($"{ex.Message} bla bla bla {ex.CurrentBalance}");
+            }
+
+
+
+
+
+
+
+
+            /**try
+            {
+                test.myString([1,2,3,4], 3);
+            }
+            catch (MyException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Yes sir");
+            }**/
+
+
+
+
+
+
+
+
+            /**try
+            {
+                Console.WriteLine(test.heHeeee());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("String not valid");
+            }
+            finally
+            {
+                Console.WriteLine("String still not valid");
+            }**/
+            //Console.WriteLine(test.heHeeee(100, "jaywalk"));
+            //Console.WriteLine(test.heHeeee(100, ""));
+            //Console.WriteLine(test.getAnimal() + " " + test.getAnimalNoise());
             //var x = "string";
             //int y = 1;
             //bool boolTest = true;

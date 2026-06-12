@@ -12,6 +12,18 @@ interface InnerDummyJava_2 {
     public int getWeight();
 }
 
+class NotUpToAge extends Exception{
+    public NotUpToAge(String m) {
+        super(m);
+    }
+}
+
+class TooYoung extends RuntimeException{
+    public TooYoung(String m){
+        super(m);
+    }
+}
+
 public class DummyJava implements InnerDummyJava, InnerDummyJava_2{
 
     int myX;
@@ -63,10 +75,28 @@ public class DummyJava implements InnerDummyJava, InnerDummyJava_2{
     //public double practiceDouble;
     //public int testInt = App.count();
 
-    public static int doCalc(){
+    /**int heHee(int num){
+        if (num < 10) {
+            throw new ArithmeticException("You're not old enough for this ride.");
+        } 
+        else {
+            System.out.println("You can ride the ride");
+        }
+        
+        return num;
+    }**/
+
+    public static int doCalc(int num){
+
+        if (num < 10) {
+            throw new TooYoung("You too young for this ride");
+        }
+        else{
+            System.out.println("You are old enough. hehee");
+        }
         //App myObj = new App();
         //int testInt = myObj.count();
-        int testInt = 9;
+        //int testInt = 5;
     //    x +=5;
     //    practiceString = "teststring";
 
@@ -144,7 +174,7 @@ public class DummyJava implements InnerDummyJava, InnerDummyJava_2{
         //System.out.println(strNewTest.indexOf('g'));
         //System.out.println(strNewTest.lastIndexOf('g'));
 
-        return testInt;
+        return num;
     }
 
     public static void main(String [] args){
@@ -159,8 +189,23 @@ public class DummyJava implements InnerDummyJava, InnerDummyJava_2{
         //int intJ = doCalc();
         //System.out.println(intJ);
         DummyJava myTest = new DummyJava();
-        System.out.println(myTest.getSound("car"));
-        System.out.println(myTest.getWeight());
+        //System.out.println(myTest.getSound("car"));
+        //System.out.println(myTest.getWeight());
+        /**try {
+            System.out.println(myTest.doCalc());
+        } catch (Exception e) {
+            // TODO: handle exception
+            System.out.println("Can't divide integer by 0");
+        } finally {
+            System.out.println("Heheee");
+        }**/
+       //System.out.println(myTest.heHee(9));
+       try {
+            myTest.doCalc(9);
+       } catch (TooYoung e) {
+        // TODO: handle exception
+            System.out.println("-----------" + e.getMessage());
+       }
     }
 }
 
