@@ -1,10 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
+using Microsoft.VisualStudio.TestPlatform.CoreUtilities.Tracing;
 
 namespace HelpFuncConsoleApp
 {
@@ -94,28 +97,66 @@ namespace HelpFuncConsoleApp
             return "heheeeeee";
         }
 
+        public HashSet<string> books()
+        {
+            Dictionary<String, int> storyBook = new Dictionary<string, int>();
+            storyBook.Add("harry potter", 12);
+            storyBook.Add("rage of dragons", 11);
+            storyBook.Add("quiet place", 5);
+            storyBook.Add("love for judgement", 9);
+            storyBook.Add("heheee", 3);
+            storyBook.Add("chains of olympus", 44);
+            storyBook.Add("half-blood prince", 66);
+
+            storyBook.Remove("rage of dragons");
+
+            //foreach (string i in storyBook.Keys)
+            //{
+            //    Console.WriteLine(storyBook[i]);
+            //}
+
+            //foreach (int i in storyBook.Values)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            HashSet<string> encyclopedias = new HashSet<String>();
+            encyclopedias.Add("zoos");
+            encyclopedias.Add("cars");
+            encyclopedias.Add("javelin");
+            encyclopedias.Add("dockers");
+            encyclopedias.Add("planes");
+            encyclopedias.Add("hooters");
+            encyclopedias.Add("jericho");
+
+            //encyclopedias.Remove("jericho");
+            //encyclopedias.Append("karaoke");
+            //encyclopedias.Clear();
+
+            foreach (string i in encyclopedias)
+            {
+                Console.WriteLine(i);
+            }
+            
+            return encyclopedias;
+        }
+
         
         static void Main(string[] args)
         {
 
             Program test = new Program();
 
-            try
+            Console.WriteLine(test.books());
+
+            /**try
             {
                 test.transaction(700);
             }
             catch (MyException2 ex)
             {
                 Console.WriteLine($"{ex.Message} bla bla bla {ex.CurrentBalance}");
-            }
-
-
-
-
-
-
-
-
+            }**/
             /**try
             {
                 test.myString([1,2,3,4], 3);
@@ -128,14 +169,6 @@ namespace HelpFuncConsoleApp
             {
                 Console.WriteLine("Yes sir");
             }**/
-
-
-
-
-
-
-
-
             /**try
             {
                 Console.WriteLine(test.heHeeee());

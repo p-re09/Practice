@@ -1,8 +1,7 @@
 package returnproject;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.jar.Attributes.Name;
+import java.security.Key;
+import java.util.*;
 
 interface InnerDummyJava {
     public String getSound(String machine);
@@ -86,14 +85,78 @@ public class DummyJava implements InnerDummyJava, InnerDummyJava_2{
         return num;
     }**/
 
-    public static int doCalc(int num){
+    public static Queue doCalc(){
 
-        if (num < 10) {
+        HashMap<String, Integer> foodOrder = new HashMap<String, Integer>();
+
+        //var foodOrder = new HashMap<String, Integer>();
+
+        //Map<String, Integer> foodOrder = new HashMap<String, Integer>();
+
+        foodOrder.put("kfc",1);
+        foodOrder.put("mac",5);
+        foodOrder.put("5g",8);
+        foodOrder.put("wendys",11);
+        foodOrder.put("popeeyes",12);
+
+        /**for (String i : foodOrder.keySet()){
+            System.out.println(i + " " + foodOrder.get(i));
+        }
+
+        for (int i : foodOrder.values()){
+            System.out.println(i);
+        }**/
+
+        //foodOrder.remove("kfc");
+        //System.out.println(foodOrder.get("mac"));
+        //System.out.println(foodOrder.size());
+        //foodOrder.clear();
+
+        Set<Integer> mySet = new HashSet<Integer>();
+        mySet.add(1);
+        mySet.add(2);
+        mySet.add(3);
+        mySet.add(4);
+        mySet.add(5);
+        mySet.add(6);
+        mySet.add(7);
+        mySet.add(8);
+
+        mySet.remove(8);
+
+        Queue<Integer> myQueue = new PriorityQueue<>();
+
+        myQueue.add(1);
+        myQueue.add(3);
+        myQueue.add(5);
+        myQueue.add(4);
+        myQueue.add(7);
+        myQueue.add(69);
+        myQueue.add(74);
+        myQueue.add(83);
+        myQueue.add(90);
+
+        //System.out.println(myQueue.offer(1));  //inserts in front
+        //System.out.println(myQueue);
+        //System.out.println(myQueue.poll());
+        //System.out.println(myQueue.element());
+        //System.out.println(myQueue.size());
+        //System.out.println(myQueue.peek());
+
+        //System.out.println(mySet.contains(2));
+
+        //for (int i : mySet){
+        //    System.out.println(i);
+        //}
+
+        /**if (num < 10) {
             throw new TooYoung("You too young for this ride");
         }
         else{
             System.out.println("You are old enough. hehee");
-        }
+        }**/
+
+
         //App myObj = new App();
         //int testInt = myObj.count();
         //int testInt = 5;
@@ -174,7 +237,7 @@ public class DummyJava implements InnerDummyJava, InnerDummyJava_2{
         //System.out.println(strNewTest.indexOf('g'));
         //System.out.println(strNewTest.lastIndexOf('g'));
 
-        return num;
+        return myQueue;
     }
 
     public static void main(String [] args){
@@ -200,12 +263,14 @@ public class DummyJava implements InnerDummyJava, InnerDummyJava_2{
             System.out.println("Heheee");
         }**/
        //System.out.println(myTest.heHee(9));
-       try {
-            myTest.doCalc(9);
+       /**try {
+            myTest.doCalc();
        } catch (TooYoung e) {
         // TODO: handle exception
             System.out.println("-----------" + e.getMessage());
-       }
+       }**/
+        
+        System.out.println(myTest.doCalc());
     }
 }
 
